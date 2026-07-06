@@ -11,10 +11,16 @@ header {
     background: url("images/front.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     color: white;
 }
 html {
     scroll-behavior: smooth;
+}
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
 /* ---------Nav Bar-------- */
 #nav-bar h2 { 
@@ -86,8 +92,9 @@ body {
     display: flex;
 }
 .about-img img { 
-    height: 700px;
-    width: 550px;
+    height: auto;
+    max-width: 550px;
+    width: 100%;
     object-fit: cover;
     object-position: center;
     margin: 0px 8px;
@@ -286,4 +293,97 @@ body {
 }
 html {
     scroll-behavior: smooth;
+}
+/* --------------------MOBILE RESPONSIVENESS----- */
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    #nav-bar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding: 20px;
+        text-align: center;
+        color: yellowgreen;
+    }
+
+    .hero-section > h1:nth-of-type(1),
+    .hero-section > h1:nth-of-type(2) {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+      .hero-section > h1:nth-of-type(1) {
+        color: #ffffff;
+    }
+    /* About Section */
+    #about-section {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .about-img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        padding-left: 0;
+        margin: 15px 0;
+    }
+
+    #bout {
+        padding-left: 0;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    /* Progress Bars */
+    .progress-bar {
+        width: 100%;
+    }
+
+    /* Services */
+    #services {
+        width: 95%;
+        padding: 40px 15px;
+    }
+
+    /* Footer */
+    .footer-og,
+    .footer-op,
+    .blood-s,
+    .sup {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .fg,
+    .fp,
+    .fo,
+    .cod,
+    .cof,
+    .cog,
+    .cop {
+        justify-content: center;
+    }
+
 }

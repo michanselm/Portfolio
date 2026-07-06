@@ -284,3 +284,6 @@ body {
      display: flex;
      justify-content: space-between; 
 }
+html {
+    scroll-behavior: smooth;
+}
